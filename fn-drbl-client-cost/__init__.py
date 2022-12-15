@@ -9,7 +9,7 @@ async def main(req: func.HttpRequest, starter: str) -> func.HttpResponse:
 
     logging.info(f"Req body :  '{req.get_json()}'.")
 
-    instance_id = await client.start_new(req.route_params["functionName"], None, req.get_json())
+    instance_id = await client.start_new("fn-drbl-orchstr-cost", None, req.get_json())
 
     logging.info(f"Started orchestration with ID = '{instance_id}'.")
 
