@@ -22,7 +22,7 @@ def orchestrator_function(context: df.DurableOrchestrationContext):
     
     get_resource_cost = yield context.call_activity('fn-drbl-activity-cost', get_resource_cost_params)
 
-    # logging.info(f"Output of activity fn: '{get_resource_cost}'")
+    logging.info(f"Output of activity fn: '{get_resource_cost}'")
     
     return [get_resource_cost]
 
