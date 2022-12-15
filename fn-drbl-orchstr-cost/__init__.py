@@ -10,9 +10,7 @@ def orchestrator_function(context: df.DurableOrchestrationContext):
     logging.info("Starting execution of orchastrator function")
 
     #Get parameters from input
-    params = context.get_input()    
-    # subscription_id = os.environ['AZURE_SUBSCRIPTION_ID']
-        
+    params = context.get_input()            
     
     get_resource_cost_params = {        
        'fromDatetime' : params['fromDatetime'],

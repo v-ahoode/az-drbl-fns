@@ -45,11 +45,6 @@ def main(params) -> dict:
             dataset=query_dataset
         )
 
-        # resourceGroups = [
-        #     "azure-utils",
-        #     "rg-msmt"
-        # ]
-
         resourceGroups = resource_mgmt_client.resource_groups.list()
 
         rgs_cost_dict = {}
@@ -57,7 +52,6 @@ def main(params) -> dict:
         for rg in list(resourceGroups):
             if rg.managed_by is None:
                 scope_with_rg = '' + params['scope'] + str(rg.name)
-                # scope_with_rg = "/subscriptions/edf6dd9d-7c4a-4bca-a997-945f3d60cf4e/resourceGroups/azure-utils"
                 query_result = cost_mgmt_client.query.usage(scope=scope_with_rg, parameters=query_def)
 
                 query_result_dict = query_result.as_dict()
