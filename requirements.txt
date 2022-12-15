@@ -3,6 +3,7 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 azure-functions
+azure-functions-durable
 azure-mgmt-costmanagement
 azure-identity
 azure-mgmt-resource>=18.0.0
