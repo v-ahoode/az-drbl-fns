@@ -13,16 +13,19 @@ def main(params) -> dict:
         from_datetime =  datetime.strptime(params['fromDatetime'], "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
         to_datetime = datetime.strptime(params['toDatetime'], "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
         
-        cred = DefaultAzureCredential(
-            exclude_cli_credential = False,
-            exclude_environment_credential = True,
-            exclude_managed_identity_credential = True,
-            exclude_powershell_credential = True,
-            exclude_visual_studio_code_credential = True,
-            exclude_shared_token_cache_credential = True,
-            exclude_interactive_browser_credential = True,
-            visual_studio_code_tenant_id = "8dc94566-ec40-4aad-abe0-739751b9d5b4"
-        )  
+        # cred = DefaultAzureCredential(
+        #     exclude_cli_credential = False,
+        #     exclude_environment_credential = False,
+        #     exclude_managed_identity_credential = False,
+        #     exclude_powershell_credential = False,
+        #     exclude_visual_studio_code_credential = False,
+        #     exclude_shared_token_cache_credential = False,
+        #     exclude_interactive_browser_credential = False,
+        #     visual_studio_code_tenant_id = "8dc94566-ec40-4aad-abe0-739751b9d5b4"
+        # )  
+
+        cred = DefaultAzureCredential()  
+
               
         subscription_id = "edf6dd9d-7c4a-4bca-a997-945f3d60cf4e"
 
