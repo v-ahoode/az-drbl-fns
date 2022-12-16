@@ -15,12 +15,12 @@ def main(params) -> dict:
         
         # cred = DefaultAzureCredential(
         #     exclude_cli_credential = False,
-        #     exclude_environment_credential = False,
-        #     exclude_managed_identity_credential = False,
-        #     exclude_powershell_credential = False,
-        #     exclude_visual_studio_code_credential = False,
-        #     exclude_shared_token_cache_credential = False,
-        #     exclude_interactive_browser_credential = False,
+        #     exclude_environment_credential = True,
+        #     exclude_managed_identity_credential = True,
+        #     exclude_powershell_credential = True,
+        #     exclude_visual_studio_code_credential = True,
+        #     exclude_shared_token_cache_credential = True,
+        #     exclude_interactive_browser_credential = True,
         #     visual_studio_code_tenant_id = "8dc94566-ec40-4aad-abe0-739751b9d5b4"
         # )  
 
